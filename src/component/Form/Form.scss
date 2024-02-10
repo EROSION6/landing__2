@@ -1,0 +1,52 @@
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1 {
+		color: #001b5c;
+		font-size: 68px;
+		font-weight: 500;
+		margin-bottom: 60px;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		strong {
+			color: #001b5c;
+			text-align: center;
+			font-size: 28px;
+			font-weight: 500;
+			margin-bottom: 8px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		&__block {
+			&__top {
+				flex-direction: column;
+			}
+		}
+	}
+
+	@media (max-width: 660px) {
+		h1 {
+			font-size: 2.4rem;
+			margin-bottom: 30px;
+		}
+		&__block {
+			gap: 10px;
+			&__top {
+				gap: 10px;
+			}
+		}
+	}
+
+	@media (max-width: 425px) {
+		h1 {
+			font-size: 1.9rem;
+			margin-bottom: 20px;
+		}
+	}
+}

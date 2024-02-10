@@ -1,0 +1,79 @@
+.btnBackground,
+.btnBorder {
+	display: flex;
+	padding: 12px 28px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 80px;
+	font-size: 16px;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btnBackground {
+	color: #fff;
+	background: #001b5c;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #001b5c;
+	z-index: 1;
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 100%;
+		background: #39a0ff;
+		z-index: -1;
+		transition: width 300ms ease-in-out;
+	}
+
+	&:hover {
+		color: #fff;
+		&:after {
+			width: 110%;
+		}
+	}
+}
+
+.btnBorder {
+	color: #001b5c;
+	border: 1px solid #39a0ff;
+	background: transparent;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 100%;
+		background: #39a0ff;
+		z-index: -1;
+		transition: width 300ms ease-in-out;
+	}
+
+	&:hover {
+		color: #fff;
+		&:after {
+			width: 110%;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.btnBackground {
+		font-size: 14px;
+	}
+}
