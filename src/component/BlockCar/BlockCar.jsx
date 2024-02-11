@@ -47,24 +47,33 @@ export const BlockCar = () => {
 		<motion.section
 			id='main'
 			variants={mainBlockAnimate}
+			animateOnce={true}
 			initial='hidden'
 			animate='visible'
 			className='container'
 		>
-			<motion.h1 variants={h1Animate}>
+			<motion.h1 animateOnce={true} variants={h1Animate}>
 				БЕРЁЗКА <br />
 				ЕВРОШОППИНГ
 			</motion.h1>
-			<motion.p variants={pAnimate}>
+			<motion.p animateOnce={true} variants={pAnimate}>
 				Ваш партнер по доступным ценам и оперативной доставке товаров из Польши
 				в Россию. Доставляем товары с популярных магазинов. Мы ценим каждого
 				клиента и гарантируем, что ваши заказы будут доставлены в срок.
 			</motion.p>
-			<motion.div variants={btnAnimate} className='container__btn'>
+			<motion.div
+				animateOnce={true}
+				variants={btnAnimate}
+				className='container__btn'
+			>
 				<MyButton variant='btnBackground'>Рассчитать стоимость</MyButton>
 				<MyButton variant='btnBackground'>Заказать доставку</MyButton>
 			</motion.div>
-			<motion.div variants={imgAnimate} className='container__images'>
+			<motion.div
+				animateOnce={true}
+				variants={imgAnimate}
+				className='container__images'
+			>
 				<img src={car} alt='car' />
 			</motion.div>
 		</motion.section>

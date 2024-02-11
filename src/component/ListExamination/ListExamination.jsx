@@ -33,6 +33,7 @@ export const ListExamination = () => {
 			variants={blockListExAnimate}
 			initial='hidden'
 			whileInView='visible'
+			animateOnce={true}
 			viewport={{ amount: 0.1 }}
 			className='listEx'
 		>

@@ -1,7 +1,7 @@
-import "./Register.scss"
-import container from "../../images/Container.png"
-import { Form } from "./Form/Form"
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import container from '../../images/Container.png'
+import { CustomForm } from './CustomForm/CustomForm'
+import './Register.scss'
 
 export const Register = () => {
 	const blockRegisterAnimate = {
@@ -9,27 +9,29 @@ export const Register = () => {
 		visible: {
 			opacity: 1,
 			y: 0,
-			transition: { delay: 0.2, ease: "easeOut" },
+			transition: { delay: 0.2, ease: 'easeOut' },
 		},
 	}
 
 	return (
 		<motion.div
 			id='register'
+			animateOnce={true}
 			variants={blockRegisterAnimate}
 			initial='hidden'
 			whileInView='visible'
 			viewport={{ amount: 0.1 }}
-			className='register'>
+			className='register'
+		>
 			<div className='register__left'>
 				<h2>Нет времени разбираться? Подскажем!</h2>
 				<p>
-					Оставьте ваши контактные данные и мы свяжемся с вами и расскажем
-					об особенностях доставки
+					Оставьте ваши контактные данные и мы свяжемся с вами и расскажем об
+					особенностях доставки
 				</p>
 			</div>
 			<div className='register__right'>
-				<Form />
+				<CustomForm />
 				<div className='register__right__images'>
 					<img src={container} alt='container' />
 				</div>

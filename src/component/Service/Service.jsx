@@ -1,26 +1,28 @@
-import { Order } from '../Order/Order';
-import './Service.scss';
-import boxes from '../../images/boxes.png';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
+import boxes from '../../images/boxes.png'
+import { Order } from '../Order/Order'
+import './Service.scss'
 
 export const Service = () => {
 	const blockServiceAnimate = {
 		hidden: { opacity: 0, y: 100 },
 		visible: { opacity: 1, y: 0, transition: { delay: 0.2, ease: 'easeOut' } },
-	};
+	}
 
 	return (
 		<>
 			<motion.div
-        id='service'
+				id='service'
+				animateOnce={true}
 				variants={blockServiceAnimate}
 				initial='hidden'
 				whileInView='visible'
 				viewport={{ amount: 0.1 }}
-				className="service">
-				<div className="service__block">
+				className='service'
+			>
+				<div className='service__block'>
 					<span>
-						<div className="service__block__title">
+						<div className='service__block__title'>
 							<h2>Доставка</h2>
 							<p>
 								Доставка осуществляется во все регионы России, <br />
@@ -29,11 +31,11 @@ export const Service = () => {
 						</div>
 						<Order />
 					</span>
-					<div className="service__block__images">
+					<div className='service__block__images'>
 						<img src={boxes} alt='boxes' />
 					</div>
 				</div>
 			</motion.div>
 		</>
-	);
-};
+	)
+}

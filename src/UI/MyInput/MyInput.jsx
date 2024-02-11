@@ -1,11 +1,21 @@
-import classNames from 'classnames';
-import ip from './MyInput.module.scss';
+import classNames from 'classnames'
+import ip from './MyInput.module.scss'
 
-export const MyInput = ({ variant, style, ...props }) => {
+export const MyInput = ({ onBlur, variant, name, style, ...props }) => {
 	const classInput = classNames({
 		[ip.inputBig]: variant === 'big',
 		[ip.inputSmall]: variant === 'small',
-	});
+	})
 
-	return <input {...props} style={style} className={classInput} />;
-};
+	return (
+		<>
+			<input
+				{...props}
+				onBlur={onBlur}
+				name={name}
+				style={style}
+				className={classInput}
+			/>
+		</>
+	)
+}

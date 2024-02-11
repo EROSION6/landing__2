@@ -2,7 +2,6 @@ import './Advantages.scss';
 import CardImages_2 from '../../images/Card/1.jpg';
 import CardImagesBlock_1 from '../../images/Card/2.png';
 import CardImagesBlock_2 from '../../images/Card/3.jpg';
-import CardImagesBlock_3 from '../../images/Card/5.png';
 import CardImages_1 from '../../images/Card/6.png';
 import { Card } from '../Card/Card';
 import { motion } from 'framer-motion';
@@ -32,7 +31,7 @@ export const Advantages = () => {
 	};
 
 	return (
-		<motion.div id='advantages' variants={blockAdvantagesAnimate} initial='hidden' whileInView='visible' viewport={{ amount: 0.1 }} className="advantages">
+		<motion.div 		animateOnce={true} id='advantages' variants={blockAdvantagesAnimate} initial='hidden' whileInView='visible' viewport={{ amount: 0.1 }} className="advantages">
 			<div className="advantages__title">
 				<h2>Преимущества</h2>
 			</div>

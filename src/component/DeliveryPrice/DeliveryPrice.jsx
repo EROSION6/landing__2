@@ -1,6 +1,6 @@
-import "./DeliveryPrice.scss"
-import calculator from "../../images/calculator.png"
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import calculator from '../../images/calculator.png'
+import './DeliveryPrice.scss'
 
 export const DeliveryPrice = () => {
 	const blockDeliverAnimate = {
@@ -8,7 +8,7 @@ export const DeliveryPrice = () => {
 		visible: {
 			opacity: 1,
 			y: 0,
-			transition: { delay: 0.2, ease: "easeOut" },
+			transition: { delay: 0.2, ease: 'easeOut' },
 		},
 	}
 
@@ -19,7 +19,8 @@ export const DeliveryPrice = () => {
 			initial='hidden'
 			whileInView='visible'
 			viewport={{ amount: 0.1 }}
-			className='deliveryPrice'>
+			className='deliveryPrice'
+		>
 			<div className='deliveryPrice__block'>
 				<div className='deliveryPrice__block__text'>
 					<h2>
@@ -29,7 +30,7 @@ export const DeliveryPrice = () => {
 					<p>Вы можете предварительно рассчитать стоимость доставки</p>
 					<div className='deliveryPrice__block__text__form'>
 						<label>
-							Сумма с сайта/ZLT{" "}
+							Сумма с сайта/ZLT{' '}
 							<input type='text' placeholder='Введите сумму ' />
 						</label>
 						<p>Итоговая сумма/RUB: 12.345</p>
